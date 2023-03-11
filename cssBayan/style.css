@@ -2,6 +2,7 @@ html {
     font-size: calc(1vw / 19.2);
     scroll-behavior: smooth;
     transition: all 1s ease;
+    cursor: none;
 }
 
 .main-title {
@@ -45,7 +46,8 @@ html {
 img {
     align-items: center;
     max-width: 100%;
-    height: auto;
+    height: 0;
+    transition: height 1s ease-in-out;
 }
 
 .bayan-container label {
@@ -57,10 +59,6 @@ img {
     margin: 0 0 5rem;
 }
 
-
-.bayan-container:hover .meme-title { /*for desktop*/
-    color: black;
-}
 
 .meme-input:hover ~ .bayan-body {
     transition: all 1s;
@@ -75,8 +73,18 @@ img {
     display: none;
 }
 
-.meme-input:checked + .meme-title {
+.meme-input:checked + .line-name > .meme-title {
     color: black;
+}
+
+.meme-input:checked + .line-name > i {
+    color: black;
+    transform-origin: 1.5vw 1.5vw;
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    transition: 1s ease;
 }
 
 .meme-input:checked ~ .bayan-body {
@@ -87,6 +95,34 @@ img {
     transition: all 0.5s;
 }
 
+.meme-input:checked ~ .bayan-body > img {
+    height: 30vw;
+}
+
+.line-name {
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+i {
+    opacity: 1;
+    font-size: 3vw;
+    padding-right: 20rem;
+    color: royalblue;
+}
+
+
+@media (min-width: 1920px) {
+    .main-title {
+        font-size: 4vw;
+    }
+
+    .meme-title {
+        font-size: 3vw;
+    }
+}
 
 @media (min-width: 820px) and (max-width: 1919px) {
     .main-title {
@@ -105,11 +141,11 @@ img {
 
 @media (min-width: 321px) and (max-width: 820px) {
     .main-title {
-        font-size: 5vw;
+        font-size: 5.5vw;
     }
 
     .meme-title {
-        font-size: 4vw;
+        font-size: 4.5vw;
     }
 
     .wrapper {
@@ -135,8 +171,45 @@ img {
 
 
 @media (hover: hover) {
+    html {
+        cursor: inherit;
+    }
+
+    i {
+        opacity: 0;
+        font-size: 3vw;
+        padding-right: 20rem;
+        color: royalblue;
+    }
+
     /* when hover is supported */
     .meme-label:hover {
         cursor: pointer;
+    }
+
+    .bayan-container:hover .meme-title {
+        color: black;
+        transition: color 1s ease-in-out;
+    }
+
+    .bayan-container:hover i {
+        opacity: 1;
+        transition: opacity 0.4s ease, color 1s ease-in-out;
+        color: black;
+        
+    }
+
+    .meme-input:hover + .line-name > i {
+        transform-origin: 1.5vw 1.5vw;
+        transform: rotate(-45deg);
+        -webkit-transform: rotate(-45deg);
+        -o-transform: rotate(-45deg);
+        -moz-transform: rotate(-45deg);
+        transition: 1s ease;
+    }
+
+    .meme-input:hover ~ .bayan-body > img {
+        height: 30vw;
+        transition: height 1s ease-in-out;
     }
 }
