@@ -11,6 +11,10 @@ html {
     font-weight: 400;
 }
 
+h2 {
+    margin: 10rem;
+}
+
 .meme-title {
     font-family: Georgia, sans-serif;
     font-size: 3vw;
@@ -134,7 +138,7 @@ i {
     }
 
     .wrapper {
-        width: 90%;
+        width: 70%;
     }
 
 }
@@ -196,7 +200,7 @@ i {
         opacity: 1;
         transition: opacity 0.4s ease, color 1s ease-in-out;
         color: black;
-        
+
     }
 
     .meme-input:hover + .line-name > i {
