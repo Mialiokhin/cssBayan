@@ -6,20 +6,20 @@ html {
 
 .main-title {
     font-family: Georgia, sans-serif;
-    font-size: 40rem;
+    font-size: 4vw;
     font-weight: 400;
 }
 
 .meme-title {
     font-family: Georgia, sans-serif;
-    font-size: 30rem;
+    font-size: 3vw;
     color: royalblue;
     font-weight: 400;
     padding-left: 20rem;
 }
 
 .wrapper {
-    width: 50%;
+    width: 70%;
     margin: 0 auto;
 }
 
@@ -44,8 +44,8 @@ html {
 
 img {
     align-items: center;
-    width: 600rem;
-    height: 300rem;
+    max-width: 100%;
+    height: auto;
 }
 
 .bayan-container label {
@@ -57,7 +57,8 @@ img {
     margin: 0 0 5rem;
 }
 
-.bayan-container:hover .meme-title {
+
+.bayan-container:hover .meme-title { /*for desktop*/
     color: black;
 }
 
@@ -67,7 +68,6 @@ img {
     margin-top: -5rem;
     padding: 20rem 30rem 10rem;
     opacity: 1;
-    cursor: pointer;
 }
 
 
@@ -88,3 +88,55 @@ img {
 }
 
 
+@media (min-width: 820px) and (max-width: 1919px) {
+    .main-title {
+        font-size: 5vw;
+    }
+
+    .meme-title {
+        font-size: 4vw;
+    }
+
+    .wrapper {
+        width: 90%;
+    }
+
+}
+
+@media (min-width: 321px) and (max-width: 820px) {
+    .main-title {
+        font-size: 5vw;
+    }
+
+    .meme-title {
+        font-size: 4vw;
+    }
+
+    .wrapper {
+        width: 90%;
+    }
+
+}
+
+@media (max-width: 320px) {
+    .main-title {
+        font-size: 6vw;
+    }
+
+    .meme-title {
+        font-size: 5vw;
+    }
+
+    .wrapper {
+        width: 90%;
+    }
+
+}
+
+
+@media (hover: hover) {
+    /* when hover is supported */
+    .meme-label:hover {
+        cursor: pointer;
+    }
+}
