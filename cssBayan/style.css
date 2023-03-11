@@ -1,0 +1,90 @@
+html {
+    font-size: calc(1vw / 19.2);
+    scroll-behavior: smooth;
+    transition: all 1s ease;
+}
+
+.main-title {
+    font-family: Georgia, sans-serif;
+    font-size: 40rem;
+    font-weight: 400;
+}
+
+.meme-title {
+    font-family: Georgia, sans-serif;
+    font-size: 30rem;
+    color: royalblue;
+    font-weight: 400;
+    padding-left: 20rem;
+}
+
+.wrapper {
+    width: 50%;
+    margin: 0 auto;
+}
+
+.bayan-container {
+    margin: 20rem 0;
+}
+
+.bayan-body {
+    display: flex;
+    justify-content: center;
+    width: calc(100% - 20rem);
+    margin: 0 auto;
+    height: 0;
+    background-color: #206876;
+    padding: 0;
+    box-sizing: border-box;
+    transition: color 0.5s, padding 0.5s, opacity 1s;
+    overflow: hidden;
+    opacity: 0;
+
+}
+
+img {
+    align-items: center;
+    width: 600rem;
+    height: 300rem;
+}
+
+.bayan-container label {
+    background-color: #015666;
+    display: block;
+    padding: 15rem 0;
+    width: 100%;
+    box-sizing: border-box;
+    margin: 0 0 5rem;
+}
+
+.bayan-container:hover .meme-title {
+    color: black;
+}
+
+.meme-input:hover ~ .bayan-body {
+    transition: all 1s;
+    height: auto;
+    margin-top: -5rem;
+    padding: 20rem 30rem 10rem;
+    opacity: 1;
+    cursor: pointer;
+}
+
+
+.meme-input {
+    display: none;
+}
+
+.meme-input:checked + .meme-title {
+    color: black;
+}
+
+.meme-input:checked ~ .bayan-body {
+    height: auto;
+    margin-top: -5px;
+    padding: 20rem 30rem 10rem;
+    opacity: 1;
+    transition: all 0.5s;
+}
+
+
