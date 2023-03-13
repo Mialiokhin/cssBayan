@@ -196,6 +196,18 @@ i {
         transition: color 1s ease-in-out;
     }
 
+    .meme-input:active + .line-name > .meme-title {
+        color: royalblue;
+        opacity: 0.6;
+        transition: color 0.2s ease-in-out;
+    }
+
+    .meme-input:active + .line-name > i {
+        color: royalblue;
+        opacity: 0.6;
+        transition: color 0.2s ease-in-out;
+    }
+
     .bayan-container:hover i {
         opacity: 1;
         transition: opacity 0.4s ease, color 1s ease-in-out;
@@ -215,5 +227,10 @@ i {
     .meme-input:hover ~ .bayan-body > img {
         height: 30vw;
         transition: height 1s ease-in-out;
+    }
+
+    .meme-input:active ~ .bayan-body > img {
+        opacity: 0.6;
+        transition: opacity 0.2s ease-in-out;
     }
 }
